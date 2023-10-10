@@ -126,5 +126,4 @@ fun main() {
             if (dia >= 22) println("Capricorn")
         }
     }
-
 }
