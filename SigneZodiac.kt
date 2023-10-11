@@ -1,4 +1,5 @@
 import java.util.*
+
 fun main() {
     val scan = Scanner(System.`in`)
     var mes = 0
@@ -20,8 +21,7 @@ fun main() {
         if (!scan.hasNextInt()) {
             println("No s'ha introduït un valor numèric, torni a intentar-ho:")
             scan.next()
-        }
-        else {
+        } else {
             mes = scan.nextInt()
             if (mes < 1 || mes > 12) {
                 println("El valor del mes no és vàlid, torni a intentar-ho:")
@@ -35,8 +35,7 @@ fun main() {
         if (!scan.hasNextInt()) {
             println("No s'ha introduït un valor numèric, torni a intentar-ho:")
             scan.next()
-        }
-        else {
+        } else {
             when (mes) {
                 1, 3, 5, 7, 8, 10, 12 -> {
                     do {
@@ -46,6 +45,7 @@ fun main() {
                         }
                     } while (dia !in 1..31)
                 }
+
                 4, 6, 9, 11 -> {
                     do {
                         dia = scan.nextInt()
@@ -54,6 +54,7 @@ fun main() {
                         }
                     } while (dia !in 1..30)
                 }
+
                 2 -> {
 
                     if ((any % 4 != 0) || ((any % 100 != 0) && (any % 4 == 0))) {
@@ -78,52 +79,51 @@ fun main() {
 
     when (mes) {
         1 -> {
-            if (dia <= 19) println("Capricorn")
-            if (dia >= 20) println("Aquari")
+            if (dia <= 19) println("Capricorn")else println("Aquari")
         }
+
         2 -> {
-            if (dia <= 18) println("Peixos")
-            if (dia >= 19) println("Piscis")
+            if (dia <= 18) println("Peixos") else println("Piscis")
         }
+
         3 -> {
-            if (dia <= 20) println("Peixos")
-            if (dia >= 21) println("Aries")
+            if (dia <= 20) println("Peixos") else println("Aries")
         }
+
         4 -> {
-            if (dia <= 19) println("Aries")
-            if (dia >= 20) println("Taure")
+            if (dia <= 19) println("Aries") else println("Taure")
         }
+
         5 -> {
-            if (dia <= 20) println("Taure")
-            if (dia >= 21) println("Bessons")
+            if (dia <= 20) println("Taure") else println("Bessons")
         }
+
         6 -> {
-            if (dia <= 20) println("Bessons")
-            if (dia >= 21) println("Cancer")
+            if (dia <= 20) println("Bessons")else println("Cancer")
         }
+
         7 -> {
-            if (dia <= 22) println("Cancer")
-            if (dia >= 23) println("Lleo")
+            if (dia <= 22) println("Cancer") else println("Lleo")
         }
+
         8 -> {
-            if (dia <= 22) println("Lleo")
-            if (dia >= 23) println("Verge")
+            if (dia <= 22) println("Lleo") else println("Verge")
         }
+
         9 -> {
-            if (dia <= 22) println("Verge")
-            if (dia >= 23) println("Balança")
+            if (dia <= 22) println("Verge") else println("Balança")
         }
+
         10 -> {
-            if (dia <= 22) println("Balança")
-            if (dia >= 23) println("Escorpio")
+            if (dia <= 22) println("Balança") else println("Escorpio")
         }
+
         11 -> {
-            if (dia <= 21) println("Escorpio")
-            if (dia >= 22) println("Sagitari")
+            if (dia <= 21) println("Escorpio") else println("Sagitari")
         }
+
         12 -> {
-            if (dia <= 21) println("Sagitari")
-            if (dia >= 22) println("Capricorn")
+            if (dia <= 21) println("Sagitari") else println("Capricorn")
         }
     }
 }
