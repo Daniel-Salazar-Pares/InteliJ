@@ -18,7 +18,7 @@ fun main () {
     } while (numero <= 1)
     for (valor in 1..numero) {
         if (numero%valor == 0){
-            ++divisors
+            divisors++
         }
     }
     when {
@@ -38,7 +38,7 @@ fun main () {
                     enter = true
                 }
             } while (!enter)
-            println("El numero no es un enter, pero el seguent primer es $seguentPrimer")
+            println("El numero no es un primer, pero el seguent primer es $seguentPrimer")
         }
     }
 }
