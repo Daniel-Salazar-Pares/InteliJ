@@ -5,7 +5,7 @@ fun main() {
     var mes = 0
     var dia = 0
     println("Introdueixi l'any de naixement:")
-    do {
+    do { //al do while es comprovara si el valor introduit es un enter
         if (!scan.hasNextInt()) {
             println("No s'ha introduït un any vàlid, torni a intentar-ho:")
             scan.next()
@@ -13,7 +13,7 @@ fun main() {
     } while (!scan.hasNextInt())
     val any = scan.nextInt()
     println("Introdueixi el mes de naixement en valor numèric:")
-    do {
+    do {//al do while es comprovara si el valor introduit es un enter i es troba entre 1 i 12
         if (!scan.hasNextInt()) {
             println("No s'ha introduït un valor numèric, torni a intentar-ho:")
             scan.next()
@@ -32,7 +32,7 @@ fun main() {
     } else {
         when (mes) {
             1, 3, 5, 7, 8, 10, 12 -> {
-                do {
+                do { //al do while es comprovara si el valor introduit es troba entre 1 i 31 ja que els mesos 1, 3, 5, 7, 8, 10, 12 tenen 31 dies
                     dia = scan.nextInt()
                     if (dia < 1 || dia > 31) {
                         println("El valor del mes no és vàlid, torni a intentar-ho:")
@@ -41,7 +41,7 @@ fun main() {
             }
 
             4, 6, 9, 11 -> {
-                do {
+                do {//al do while es comprovara si el valor introduit es troba entre 1 i 30 ja que els mesos 4, 6, 9 i 11 tenen 30 dies
                     dia = scan.nextInt()
                     if (dia < 1 || dia > 30) {
                         println("El valor del mes no és vàlid, torni a intentar-ho:")
@@ -49,7 +49,7 @@ fun main() {
                 } while (dia !in 1..30)
             }
 
-            2 -> {
+            2 -> { //al cas de febrer (mes 2) es comproba si te 28 o 29 dies amb unes operacions donades per l'enunciat
 
                 if ((any % 4 != 0) || ((any % 100 != 0) && (any % 4 == 0))) {
                     do {
@@ -70,7 +70,7 @@ fun main() {
         }
     }
 
-    when (mes) {
+    when (mes) { //depenent del dia i al mes que es troba imprimira el signe zodiacal correspondent
         1 -> if (dia <= 19) println("Capricorn") else println("Aquari")
         2 -> if (dia <= 18) println("Peixos") else println("Piscis")
         3 -> if (dia <= 20) println("Peixos") else println("Aries")
