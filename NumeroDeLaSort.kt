@@ -51,7 +51,7 @@ fun main() {
 
     var numeroSort = data
     while (numeroSort > 9) {
-        var sumaDigits:Int = 0
+        var sumaDigits = 0
         while (numeroSort > 0) {
             sumaDigits += numeroSort % 10
             numeroSort /= 10
